@@ -46,6 +46,7 @@ As mentioned previously there are numerous ways that the user can interact with 
 }
 ```
 - **This will return a JSON web token that needs to be used when performing all other operations other than login.**
+- Automatically sends welcome email to user
 
 ### User Logout
 
@@ -82,6 +83,7 @@ As mentioned previously there are numerous ways that the user can interact with 
 - Deletes specified user data, and all tasks associated with user from the database
 - **BREAKS RULE OF ONLY ALLOWING USERS TO INTERACT WITH THEIR OWN DATA**
 - **Kept in production for learning oppertunities**
+- Automatically sends goodbye email to user
 
 ### Delete User (By ID)
 
