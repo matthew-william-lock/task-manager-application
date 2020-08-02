@@ -1,8 +1,7 @@
 const mongoose = require('mongoose')
 const validate = require('validator')
 
-const databaseName = process.env.DATABASE_NAME
-const connectionURL = process.env.DATABASE_URL+databaseName
+const connectionURL = process.env.DATABASE_URL
 
 mongoose.connect(connectionURL,{
     useNewUrlParser:true,
