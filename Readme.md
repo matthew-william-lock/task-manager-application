@@ -23,7 +23,7 @@ As mentioned previously there are numerous ways that the user can interact with 
 ### Create New User
 
 ``POST`` : https://hexdro-task-manager.herokuapp.com/users
-Body: 
+ <br/>Body: 
 ```
 {
     "name":"Full name",
@@ -38,7 +38,7 @@ Body:
 ### User Login
 
 ``POST`` : https://hexdro-task-manager.herokuapp.com/users/login
-Body: 
+ <br/>Body: 
 ```
 {
     "name":"Full name",
@@ -50,21 +50,21 @@ Body:
 ### User Logout
 
 ``POST`` : https://hexdro-task-manager.herokuapp.com/users/logout
-auth: This requires a bearer token provided when creating a new user, or logging into the user
+ <br/>auth: This requires a bearer token provided when creating a new user, or logging into the user
 - Removes current token from list of tokens that can be used to access user data
 
 ### User Logout of All Sessions
 
 ``POST`` : https://hexdro-task-manager.herokuapp.com/users/logout
-auth: This requires a bearer token provided when creating a new user, or logging into the user
+ <br/>auth: This requires a bearer token provided when creating a new user, or logging into the user
 - Removes all tokens from list of tokens that can be used to access user data
 - User will have to login again after this to recieve new token
 
 ### Upload Avatar
 
 ``POST`` : https://hexdro-task-manager.herokuapp.com/users/me/avatar
-auth: This requires a bearer token provided when creating a new user, or logging into the user
-body : {
+ <br/>auth: This requires a bearer token provided when creating a new user, or logging into the user
+ <br/>body : {
 ```
     "key":"upload",
     "value":avatar.jpg
@@ -78,7 +78,7 @@ body : {
 ### Delete User
 
 ``DELETE`` : https://hexdro-task-manager.herokuapp.com/users/me
-auth: This requires a bearer token provided when creating a new user, or logging into the user
+ <br/>auth: This requires a bearer token provided when creating a new user, or logging into the user
 - Deletes specified user data, and all tasks associated with user from the database
 - **BREAKS RULE OF ONLY ALLOWING USERS TO INTERACT WITH THEIR OWN DATA**
 - **Kept in production for learning oppertunities**
@@ -86,26 +86,26 @@ auth: This requires a bearer token provided when creating a new user, or logging
 ### Delete User (By ID)
 
 ``DELETE`` : https://hexdro-task-manager.herokuapp.com/users/insert_user_id_here
-auth: This requires a bearer token provided when creating a new user, or logging into the user
+ <br/>auth: This requires a bearer token provided when creating a new user, or logging into the user
 - Deletes user data, and all tasks associated with user from the database
 
 ### Delete Avatar
 
 ``DELETE`` : https://hexdro-task-manager.herokuapp.com/users/me/avatar
-auth: This requires a bearer token provided when creating a new user, or logging into the user
+ <br/>auth: This requires a bearer token provided when creating a new user, or logging into the user
 - Removes user avatar from the database
 
 ### Read Profile
 
 ``GET`` : https://hexdro-task-manager.herokuapp.com/users/me
-auth: This requires a bearer token provided when creating a new user, or logging into the user
+ <br/>auth: This requires a bearer token provided when creating a new user, or logging into the user
 - Returns user information of the user currently logged in
 - Purposefully omits information like password, login tokens
 
 ### Read All Users
 
 ``GET`` : https://hexdro-task-manager.herokuapp.com/users
-auth: This requires a bearer token provided when creating a new user, or logging into the user
+ <br/>auth: This requires a bearer token provided when creating a new user, or logging into the user
 - Returns  user information of all users stored on the database
 - Purposefully omits information like password, login tokens
 - **BREAKS RULE OF ONLY ALLOWING USERS TO INTERACT WITH THEIR OWN DATA**
@@ -114,8 +114,8 @@ auth: This requires a bearer token provided when creating a new user, or logging
 ### Update User
 
 ``PATCH`` : https://hexdro-task-manager.herokuapp.com/users/me
-auth: This requires a bearer token provided when creating a new user, or logging into the user
-body:
+ <br/>auth: This requires a bearer token provided when creating a new user, or logging into the user
+ <br/>body:
 ```
 {
     name":"New name",
@@ -130,8 +130,8 @@ body:
 ### Create Task
 
 ``POST`` : https://hexdro-task-manager.herokuapp.com/tasks
-auth: This requires a bearer token provided when creating a new user, or logging into the user
-Body: 
+ <br/>auth: This requires a bearer token provided when creating a new user, or logging into the user
+ <br/>Body: 
 ```
 {    
     "description":"Wash the windows",
@@ -144,21 +144,21 @@ Body:
 ### Read Tasks
 
 ``GET`` : https://hexdro-task-manager.herokuapp.com/tasks?sortBy=completed:desc
-auth: This requires a bearer token provided when creating a new user, or logging into the user
+ <br/>auth: This requires a bearer token provided when creating a new user, or logging into the user
 - Returns all tasks associated with user currently logged in
 - Allows user to sort by completed ( ``desc`` or ``asc``)
 
 ### Read Single Task
 
 ``GET`` : https://hexdro-task-manager.herokuapp.com/tasks/inset_task_id_here
-auth: This requires a bearer token provided when creating a new user, or logging into the user
+ <br/>auth: This requires a bearer token provided when creating a new user, or logging into the user
 - Returns task specified as long as it is associated with user currently logged in
 
 ### Update Task
 
 ``PATCH`` : https://hexdro-task-manager.herokuapp.com/tasks/inset_task_id_here
-auth: This requires a bearer token provided when creating a new user, or logging into the user
-body:
+ <br/>auth: This requires a bearer token provided when creating a new user, or logging into the user
+ <br/>body:
 ```
 {
     "description":"Updated!",
@@ -170,8 +170,8 @@ body:
 ### Delete Task
 
 ``PATCH`` : https://hexdro-task-manager.herokuapp.com/tasks/inset_task_id_here
-auth: This requires a bearer token provided when creating a new user, or logging into the user
-body:
+ <br/>auth: This requires a bearer token provided when creating a new user, or logging into the user
+ <br/>body:
 - Deletes specified task, provided it is associated with user currently logged in
 
 ---
