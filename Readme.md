@@ -34,6 +34,7 @@ As mentioned previously there are numerous ways that the user can interact with 
 ```
 *The password must contain at least 7 characters and cannot contain 'password'*
 - **This will return a JSON web token that needs to be used when performing all other operations other than login.**
+- Automatically sends welcome email to user
 
 ### User Login
 
@@ -46,7 +47,6 @@ As mentioned previously there are numerous ways that the user can interact with 
 }
 ```
 - **This will return a JSON web token that needs to be used when performing all other operations other than login.**
-- Automatically sends welcome email to user
 
 ### User Logout
 
