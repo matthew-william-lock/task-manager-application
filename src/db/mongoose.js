@@ -9,7 +9,7 @@ mongoose.connect(connectionURL,{
     useFindAndModify:false,
     useUnifiedTopology: true
 }).then((response)=>{
-    console.log("Connected!")
+    // console.log("Connected!")
 }).catch((error)=>{
-    console.log(error)
+    // console.log(error)
 })

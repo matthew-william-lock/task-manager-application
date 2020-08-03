@@ -253,3 +253,34 @@ The [env-cmd](https://www.npmjs.com/package/env-cmd) module is used to load in e
 ### Production MongoDB Service
 
 This applicaiton hosts a mongoDB database on [atlas]([https://www.mongodb.com/cloud/atlas) and [mongodb atlas](https://www.mongodb.com/cloud/atlas) has been used for dev access.
+
+## Testing Frameworks
+
+Two powerful testing frameworks include [JEST](https://jestjs.io/) and [MOCHA](https://mochajs.org/). For this application we are using JEST.
+
+## SuperTest
+
+[SuperTest]() is used for testing express applications.
+
+## Running Tests
+
+The follow script can be added to package.json
+``` 
+  "scripts": {
+    "test": "env-cmd -f ./config/test.env jest --watch --runInBand"
+  },
+```
+
+We can then configure jest in package.json:
+```
+ "jest":{
+    "testEnvironment":"node"
+  },
+  "keywords": [], 
+...
+```
+
+This will trigger the script created to run JEST tests:
+```
+npm run test
+```
