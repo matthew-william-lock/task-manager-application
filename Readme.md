@@ -215,6 +215,11 @@ To see the current environmental variable simply run:
 heroku config
 ```
 
+Commit the project
+```
+git push heroku master
+```
+
 ### MonogoDB Server
 
 To run the mondodb server on your machine once it has been installed, run the following command to start the server when testing on the localhost
